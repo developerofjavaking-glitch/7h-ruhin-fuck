@@ -126,11 +126,15 @@ class ApkExtractorViewModel(application: Application) : AndroidViewModel(applica
                     selectedPackages = setOf(app.packageName)
                 )
             } else {
-                state
+                val next = state.selectedPackages.toMutableSet()
+                if (!next.add(app.packageName)) {
+                    next.remove(app.packageName)
+                }
+                state.copy(
+                    selectedPackages = next,
+                    isSelectionMode = next.isNotEmpty()
+                )
             }
-        }
-        if (_uiState.value.isSelectionMode && app.packageName !in _uiState.value.selectedPackages) {
-            toggleSelection(app)
         }
     }
 

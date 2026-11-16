@@ -81,7 +81,7 @@ fun SplashScreen(
                 color = MaterialTheme.colorScheme.primary
             ) {
                 Image(
-                    painter = painterResource(id = R.drawable.launcher_foreground_1794837801337),
+                    painter = painterResource(id = R.drawable.app_logo_classic_1794840135301),
                     contentDescription = stringResource(R.string.app_name),
                     contentScale = ContentScale.Crop,
                     modifier = Modifier

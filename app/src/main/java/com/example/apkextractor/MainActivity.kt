@@ -1,6 +1,7 @@
 package com.example.apkextractor
 
 import android.Manifest
+import android.content.ActivityNotFoundException
 import android.content.BroadcastReceiver
 import android.content.ClipData
 import android.content.Context
@@ -200,17 +201,37 @@ class MainActivity : ComponentActivity() {
                 uris.drop(1).forEach { clip.addItem(ClipData.Item(it)) }
             }
         }
-        startActivity(Intent.createChooser(intent, getString(R.string.share_with)))
+        try {
+            startActivity(Intent.createChooser(intent, getString(R.string.share_with)))
+        } catch (e: ActivityNotFoundException) {
+            Toast.makeText(
+                this,
+                getString(R.string.error_generic, e.message ?: e.javaClass.simpleName),
+                Toast.LENGTH_LONG
+            ).show()
+        }
     }
 
     private fun uninstallApp(app: AppEntry) {
-        startActivity(Intent(Intent.ACTION_DELETE, Uri.parse("package:${app.packageName}")))
+        try {
+            startActivity(Intent(Intent.ACTION_DELETE, Uri.parse("package:${app.packageName}")))
+        } catch (e: ActivityNotFoundException) {
+            Toast.makeText(
+                this,
+                getString(R.string.error_generic, e.message ?: e.javaClass.simpleName),
+                Toast.LENGTH_LONG
+            ).show()
+        }
     }
 
     private fun launchApp(app: AppEntry) {
         val launchIntent = packageManager.getLaunchIntentForPackage(app.packageName)
         if (launchIntent != null) {
-            startActivity(launchIntent)
+            try {
+                startActivity(launchIntent)
+            } catch (_: ActivityNotFoundException) {
+                Toast.makeText(this, R.string.cannot_launch, Toast.LENGTH_SHORT).show()
+            }
         } else {
             Toast.makeText(this, R.string.cannot_launch, Toast.LENGTH_SHORT).show()
         }
