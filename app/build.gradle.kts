@@ -8,7 +8,7 @@ android {
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.aistudio.apkextractor.xkqmvr"
+        applicationId = "com.exapkectractor.dev.boomboom"
         minSdk = 24
         targetSdk = 36
         versionCode = 1

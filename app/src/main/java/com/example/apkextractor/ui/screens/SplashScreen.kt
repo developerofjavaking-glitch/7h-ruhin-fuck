@@ -15,7 +15,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -27,6 +27,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.scale
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -76,17 +77,17 @@ fun SplashScreen(
                 .alpha(alpha.value)
         ) {
             Surface(
-                shape = RoundedCornerShape(24.dp),
+                shape = CircleShape,
                 shadowElevation = 6.dp,
-                color = MaterialTheme.colorScheme.primary
+                color = Color.White
             ) {
                 Image(
-                    painter = painterResource(id = R.drawable.app_logo_classic_1794840135301),
+                    painter = painterResource(id = R.drawable.img_app_logo),
                     contentDescription = stringResource(R.string.app_name),
                     contentScale = ContentScale.Crop,
                     modifier = Modifier
-                        .size(96.dp)
-                        .clip(RoundedCornerShape(24.dp))
+                        .size(104.dp)
+                        .clip(CircleShape)
                 )
             }
             Spacer(modifier = Modifier.height(16.dp))
