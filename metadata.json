@@ -1,0 +1,6 @@
+{
+  "name": "APK Extractor",
+  "description": "Browse installed apps, inspect package metadata, and extract or share APK files.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

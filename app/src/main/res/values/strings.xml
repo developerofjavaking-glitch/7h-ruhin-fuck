@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">APK Extractor</string>
+    <string name="splash_subtitle">Package Inspector &amp; Exporter</string>
+    <string name="title_app_info">App Info</string>
+
+    <string name="menu_show_system">Show system apps</string>
+    <string name="menu_extract_all">Extract all</string>
+    <string name="menu_export_list">Export list as text file</string>
+    <string name="menu_refresh">Refresh</string>
+    <string name="menu_search">Search</string>
+    <string name="search_hint">Search by app or package name</string>
+    <string name="menu_select_all">Select all</string>
+    <string name="menu_extract">Extract</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_more_options">More options</string>
+    <string name="cd_back">Navigate back</string>
+    <string name="cd_clear_search">Clear search</string>
+    <string name="cd_close_selection">Exit selection mode</string>
+    <string name="cd_app_actions">App actions</string>
+
+    <string name="action_app_info">App Info</string>
+    <string name="action_uninstall">Uninstall app</string>
+    <string name="action_run">Run app</string>
+    <string name="action_extract_apk">Extract APK</string>
+    <string name="action_share_apk">Share APK</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+
+    <string name="apps_count">%1$d apps</string>
+    <string name="selected_count">%1$d selected</string>
+    <string name="no_apps">No apps found</string>
+    <string name="no_apps_hint">Try clearing your search or toggling system apps</string>
+    <string name="app_not_found">Application is no longer installed</string>
+    <string name="extracting">Extracting…</string>
+    <string name="extracting_progress">Extracting %1$d of %2$d…</string>
+    <string name="extract_done">Extraction finished</string>
+    <string name="extract_result">Extracted: %1$d\nFailed: %2$d\n\nSaved in: %3$s</string>
+    <string name="extract_all_confirm_title">Extract all apps</string>
+    <string name="extract_all_confirm">Extract %1$d apps to Download/ExtractedApks?</string>
+    <string name="list_exported">App list saved to %1$s</string>
+    <string name="share_with">Share with</string>
+    <string name="storage_denied">Storage permission is required to save APK files</string>
+    <string name="cannot_launch">This app cannot be launched</string>
+    <string name="error_generic">Something went wrong: %1$s</string>
+
+    <string name="label_name">App name</string>
+    <string name="label_package">Package name</string>
+    <string name="label_version">Version</string>
+    <string name="label_min_sdk">Minimum Android</string>
+    <string name="label_target_sdk">Target Android</string>
+    <string name="label_installed">Installed</string>
+    <string name="label_updated">Last updated</string>
+    <string name="label_path">APK path</string>
+    <string name="label_size">APK size</string>
+    <string name="label_permissions">Permissions</string>
+    <string name="label_features">Required features</string>
+    <string name="section_overview">Package Overview</string>
+    <string name="section_build">SDK &amp; Dates</string>
+    <string name="section_storage">APK File</string>
+    <string name="section_capabilities">Permissions &amp; Features</string>
+    <string name="system_app_badge">System</string>
+    <string name="user_app_badge">User</string>
+    <string name="split_apks_count">%1$d split APKs</string>
+    <string name="none">None</string>
+</resources>
